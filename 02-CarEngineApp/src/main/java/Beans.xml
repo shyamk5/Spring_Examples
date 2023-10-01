@@ -5,11 +5,11 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="diesel" class="com.spring.beans.DieselEngine"/>
-    <bean id="petrol" class="com.spring.beans.PetrolEngine"/>
-    <bean id="car" class="com.spring.beans.Car">
-    	<constructor-arg ref="petrol"></constructor-arg>
-    	<property name="eng" ref="diesel"></property>
+    <bean id="eng2" class="com.spring.beans.DieselEngine"/>
+    <bean id="eng" class="com.spring.beans.PetrolEngine"/>
+    
+    <bean id="car" class="com.spring.beans.Car" scope="singleton" autowire="byName">
+    	
     </bean>
     
     
